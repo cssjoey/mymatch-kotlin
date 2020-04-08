@@ -3,6 +3,8 @@ plugins {
 
 	kotlin("jvm")
 	kotlin("plugin.spring")
+	//id("org.jetbrains.kotlin.plugin.noarg")
+	id ("org.jetbrains.kotlin.plugin.jpa")
 
 }
 
@@ -21,9 +23,11 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter")
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
-	//implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-	//implementation("org.springframework.boot:spring-boot-starter-data-rest")
-	implementation("org.springframework.boot:spring-boot-starter-data-mongodb")
-	implementation("org.mongodb:mongodb-driver")
+	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+	implementation("org.springframework.boot:spring-boot-starter-data-rest")
+//	implementation("org.springframework.boot:spring-boot-starter-data-mongodb")
+//	implementation("org.mongodb:mongodb-driver")
+
+	implementation("org.postgresql:postgresql")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }

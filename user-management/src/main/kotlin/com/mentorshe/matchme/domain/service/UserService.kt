@@ -2,7 +2,6 @@ package com.mentorshe.matchme.domain.service
 
 import com.mentorshe.matchme.domain.entity.User
 import com.mentorshe.matchme.domain.repository.UserRepository
-import org.bson.types.ObjectId
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 import java.util.*
@@ -11,9 +10,13 @@ import java.util.*
 class UserService @Autowired constructor(private val userRepository : UserRepository) {
 
 
-   fun findUserById(id : ObjectId) : Optional<User> =
-        userRepository.findById(id)
-
-    fun findAllUsers() : Collection<User> =
+    fun findAllUsers() : Iterable<User> =
             userRepository.findAll()
+
+    fun findUserByFirstName(firstName : String) : Iterable<User> =
+            userRepository.findByFirstName(firstName)
+
+    fun findUserByLastName(lastName : String) : Iterable<User> =
+            userRepository.findByLastName(lastName)
+
 }

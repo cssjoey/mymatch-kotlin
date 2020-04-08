@@ -1,4 +1,15 @@
-_id,first-name,second-name,email,mobile,address,user-type
-ObjectId("5e8b0630f113ba1064848325"),Sajal,Cherukuri,s@s.com,040000,Bentleigh East, Victoria,mentee
-ObjectId("5e8b069cf113ba1064848326"),Srujana,Cherukuri,c@c.com,047000,Bentleigh East, Victoria,mentor
-ObjectId("5e8b06cef113ba1064848327"),Srujana,cherukuri,c@c.com,0470000,Nar Nar Goon, Victoria,admin
+INSERT INTO matchme."user"(
+id, address, email, first_name, last_name, mobile, type)
+VALUES (1,'Bentleigh', 's.s@com', 'Sajal', 'Cherukuri', '047000', 'mentee');
+
+INSERT INTO matchme."user"(
+id, address, email, first_name, last_name, mobile, type)
+VALUES (2,'Bentleigh', 'c.s@com', 'Srujana', 'Cherukuri', '047000', 'mentor');
+
+INSERT INTO matchme."user"(
+id, address, email, first_name, last_name, mobile, type)
+VALUES (3, 'Bentleigh', 'c.s@com', 'Srujana', 'Cherukuri', '047000', 'admin');
+
+INSERT INTO matchme."user"(
+id, address, email, first_name, last_name, mobile, type)
+VALUES (4, 'Bentleigh', 'c.s@com', 'Ravali', 'Cherukuri', '047000', 'mentor');
