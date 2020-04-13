@@ -17,6 +17,7 @@ plugins {
 
     kotlin("jvm") version "1.3.71"
     kotlin("plugin.spring") version "1.3.71"
+
 }
 
 repositories {
@@ -25,6 +26,7 @@ repositories {
 
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter")
+    implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 //    implementation("org.springframework.boot:spring-boot-starter-data-mongodb")

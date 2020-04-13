@@ -9,6 +9,19 @@ plugins {
 }
 
 
+/*jar {
+	baseName = 'SpringBootMultiModulesGradleNpm'
+	version = '0.0.1-SNAPSHOT'
+	manifest {
+		attributes("Main-Class": "com.roytuts.main.Application")
+	}
+	from('../web-app/build') {
+		into 'public'
+	}
+}
+jar.dependsOn(':web-app:build')*/
+
+
 dependencies {
 	//Note the line implementation(project(":test-utils")). This is very powerful as it allows for you to pull in this module as a dependency.
 	//Just be aware of circular dependencies, i.e. modules that depend on each other.

@@ -8,10 +8,10 @@ import javax.persistence.*
 @Table(name="user", schema="matchme")
 data class User @JsonCreator constructor(
         @Id val id: Long,
-        val firstName: String,
-        val lastName: String,
-        val email: String,
-        val mobile: String,
-        val address: String,
-        val type: String
+        var firstName: String,
+        var lastName: String,
+        var email: String,
+        var mobile: String,
+        var address: String,
+        var type: String
 )

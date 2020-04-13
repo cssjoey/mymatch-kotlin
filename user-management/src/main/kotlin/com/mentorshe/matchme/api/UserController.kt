@@ -41,8 +41,12 @@ class UserController  @Autowired constructor(private val userService: UserServic
             consumes = [ MediaType.APPLICATION_JSON_VALUE],
             produces = [ MediaType.APPLICATION_JSON_VALUE]
     )
-    fun register(@RequestBody user : User): ResponseStatus{
-        return ResponseStatus("200", "OK")
+    fun register(@RequestBody user : User): ResponseStatus {
+        val tUser = userService.registerUser(user)
+        if (tUser != null)
+            return ResponseStatus("200", "OK")
+        else
+            return  ResponseStatus("700", "User Registration Failed")
     }
 
     @PostMapping(
