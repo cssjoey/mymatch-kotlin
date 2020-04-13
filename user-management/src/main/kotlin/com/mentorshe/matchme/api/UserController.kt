@@ -36,5 +36,24 @@ class UserController  @Autowired constructor(private val userService: UserServic
         return responseStatus
     }
 
+    @PostMapping(
+            value = ["/register"],
+            consumes = [ MediaType.APPLICATION_JSON_VALUE],
+            produces = [ MediaType.APPLICATION_JSON_VALUE]
+    )
+    fun register(@RequestBody user : User): ResponseStatus{
+        return ResponseStatus("200", "OK")
+    }
+
+    @PostMapping(
+            value = ["/login"],
+            consumes = [ MediaType.APPLICATION_JSON_VALUE],
+            produces = [ MediaType.APPLICATION_JSON_VALUE]
+    )
+    fun login(@RequestBody user : User): ResponseStatus{
+        return ResponseStatus("200", "OK")
+    }
+
+
 
 }

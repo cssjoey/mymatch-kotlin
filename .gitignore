@@ -11,3 +11,5 @@
 *.ipr
 
 *.log
+
+*/build/
